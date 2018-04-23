@@ -1,20 +1,8 @@
 {
   "presets": [
-    "react",
     ["env", {
-      "useBuiltIns": true,
-      "targets": {
-        "browsers": [
-          "ie >= 11"
-        ]
-      },
-      "modules": false,
-      "loose": true,
+      "modules": false
     }]
   ],
-  "plugins": [
-    "external-helpers",
-    "transform-class-properties",
-    "transform-object-rest-spread"
-  ]
+  "plugins": ["external-helpers"]
 }

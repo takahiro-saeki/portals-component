@@ -1,7 +1,7 @@
 import resolve from 'rollup-plugin-node-resolve';
-import babelrc from 'babelrc-rollup';
 import babel from 'rollup-plugin-babel';
 import commonjs from 'rollup-plugin-commonjs';
+import replace from 'rollup-plugin-replace';
 import uglify from 'rollup-plugin-uglify';
 
 export default {
@@ -11,11 +11,19 @@ export default {
     format: 'cjs'
   },
   plugins: [
-    resolve(),
-    commonjs({
-      include: 'node_modules/**'
+    replace({
+      'process.env.NODE_ENV': JSON.stringify( 'production' )
     }),
-    babel(babelrc()),
+    babel({
+      exclude: 'node_modules/**'
+    }),
+    resolve({
+      customResolveOptions: {
+        moduleDirectory: 'node_modules'
+      }
+    }),
+    commonjs(),
     uglify()
-  ]
-}
+  ],
+  external: ['react', 'react-dom', 'prop-types']
+};

@@ -6,6 +6,7 @@ const App = () => (
     <PortalsComponent el="#portals-test" dom="section">
       <div>test</div>
     </PortalsComponent>
+    <div>app</div>
   </div>
 )
 

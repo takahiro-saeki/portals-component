@@ -1,5 +1,3 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './containers/App';
+import PortalsComponent from './components/PortalsComponent';
 
-ReactDOM.render(<App />, document.getElementById('app'))
+export default PortalsComponent;
