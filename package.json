@@ -1,0 +1,12 @@
+{
+  "name": "portals-component",
+  "description": "this is library for portals components for React.js",
+  "version": "0.0.1",
+  "author": "takahiro-saeki",
+  "devDependencies": {
+    "rollup": "^0.58.1"
+  },
+  "license": "MIT",
+  "main": "lid/index.js",
+  "repository": "https://github.com/takahiro-saeki/portals-component.git"
+}
