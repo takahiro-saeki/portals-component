@@ -23,7 +23,7 @@ At the same time, Facebook published `portals` App, so I decided to use it. afte
 | --- | --- | --- | --- |
 | el | string | '' | dom element which is rendered. |
 | children | node | null | react element, you can use like `this.props.children` . |
-| dom | string | 'div' | wrapper dom element. when you render DOM through using portals api, you have to specify dom element. |
+| dom | string | div | wrapper dom element. when you render DOM through using portals api, you have to specify dom element. |
 
 ## Example
 Let's say, you have a html file like below.
@@ -62,7 +62,7 @@ render(<App />, document.getElementById('app'))
 then, you can check dom which is rendered by using inspector like Google chrome.
 `id app` will be rendered like below.
 
-```jsx
+```html
 <div>
   <div>different</div>
 </div>
@@ -70,7 +70,7 @@ then, you can check dom which is rendered by using inspector like Google chrome.
 
 and inside of `id portals-test` is like below
 
-```
+```html
 <div>
   <div>app</div>
 </div>
