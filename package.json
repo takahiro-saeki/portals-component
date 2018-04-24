@@ -1,11 +1,16 @@
 {
   "name": "portals-component",
   "description": "this is library for portals components for React.js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "takahiro-saeki",
+  "files": [
+    "lib",
+    "src"
+  ],
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.3",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-function-bind": "^6.22.0",
@@ -13,26 +18,32 @@
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
-    "babelrc-rollup": "^3.0.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.7.0",
+    "prettier": "^1.12.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "rollup": "^0.58.1",
     "rollup-plugin-babel": "^3.0.3",
     "rollup-plugin-commonjs": "^9.1.0",
-    "rollup-plugin-env": "^0.21.4",
     "rollup-plugin-node-resolve": "^3.3.0",
-    "rollup-plugin-replace": "^2.0.0",
-    "rollup-plugin-serve": "^0.4.2",
     "rollup-plugin-uglify": "^3.0.0"
   },
   "license": "MIT",
   "main": "lib/index.js",
   "repository": "https://github.com/takahiro-saeki/portals-component.git",
   "scripts": {
-    "start": "rollup -c rollup.config.dev.js -w",
-    "build": "rollup -c rollup.config.prod.js"
+    "develop": "parcel dev/index.html",
+    "build": "rollup -c",
+    "lint": "eslint src/* --ext .jsx --ext .js --fix --quiet --cache"
   },
   "dependencies": {
-    "babel-polyfill": "^6.26.0"
+    "babel-polyfill": "^6.26.0",
+    "lib": "^3.0.2"
   }
 }

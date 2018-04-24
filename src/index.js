@@ -1,3 +1,3 @@
-import PortalsComponent from './components/PortalsComponent';
+import PortalsComponent from './PortalsComponent';
 
 export default PortalsComponent;

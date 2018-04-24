@@ -1,8 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import PropTypes from 'prop-types';
+import { Component } from 'react';
+import { createPortal } from 'react-dom';
+import { string, element } from 'prop-types';
 
-class PortalsComponent extends React.Component {
+class PortalsComponent extends Component {
   static defaultProps = {
     el: '',
     children: null,
@@ -10,9 +10,9 @@ class PortalsComponent extends React.Component {
   };
 
   static propTypes = {
-    el: PropTypes.string,
-    children: PropTypes.element,
-    dom: PropTypes.string
+    el: string,
+    children: element,
+    dom: string
   };
 
   constructor(props) {
@@ -26,7 +26,8 @@ class PortalsComponent extends React.Component {
   }
 
   render() {
-    return ReactDOM.createPortal(this.props.children, this.el);
+    const { children } = this.props;
+    return createPortal(children, this.el);
   }
 }
 

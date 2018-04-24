@@ -1,7 +1,6 @@
 import resolve from 'rollup-plugin-node-resolve';
 import babel from 'rollup-plugin-babel';
 import commonjs from 'rollup-plugin-commonjs';
-import replace from 'rollup-plugin-replace';
 import uglify from 'rollup-plugin-uglify';
 
 export default {
@@ -11,9 +10,6 @@ export default {
     format: 'cjs'
   },
   plugins: [
-    replace({
-      'process.env.NODE_ENV': JSON.stringify( 'production' )
-    }),
     babel({
       exclude: 'node_modules/**'
     }),
