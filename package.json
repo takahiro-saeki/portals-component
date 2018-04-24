@@ -43,7 +43,6 @@
     "lint": "eslint src/* --ext .jsx --ext .js --fix --quiet --cache"
   },
   "dependencies": {
-    "babel-polyfill": "^6.26.0",
-    "lib": "^3.0.2"
+    "babel-polyfill": "^6.26.0"
   }
 }
