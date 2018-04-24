@@ -1,4 +1,8 @@
 # portals-component
+[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
+[![Maintainability](https://api.codeclimate.com/v1/badges/f93bca589d98fc4ad589/maintainability)](https://codeclimate.com/github/takahiro-saeki/portals-component/maintainability)
+[![npm version](https://badge.fury.io/js/portals-component.svg)](https://badge.fury.io/js/portals-component)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/232dfbd62e29478f9cb05f540d81c46a)](https://www.codacy.com/app/takahiro-saeki/portals-component?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=takahiro-saeki/portals-component&amp;utm_campaign=Badge_Grade)  
 this is utility for portals api for React.js.
 
 ## Problem
