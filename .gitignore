@@ -60,3 +60,5 @@ typings/
 # hide cache for dev.
 dev/.cache
 dev/dist
+dist
+.cache

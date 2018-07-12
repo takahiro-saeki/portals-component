@@ -3,25 +3,31 @@ import { createPortal } from 'react-dom';
 import { string, element } from 'prop-types';
 
 class PortalsComponent extends Component {
-  static defaultProps = {
-    el: '',
-    children: null,
-    dom: 'div'
-  };
-
   static propTypes = {
     el: string,
     children: element,
     dom: string
   };
 
+  static defaultProps = {
+    el: '',
+    children: null,
+    dom: 'div'
+  };
+
   constructor(props) {
     super(props);
-    this.el = document.createElement(this.props.dom);
-    this.portalDom = document.querySelector(this.props.el);
+    this.el = document.createElement(props.dom);
+    this.portalDom = document.querySelector(props.el);
   }
 
   componentDidMount() {
+    if (!this.portalDom) {
+      const { el } = this.props;
+      // eslint-disable-next-line no-console
+      console.warn(`there is no ${el}. please check your implementation.`);
+      return false;
+    }
     this.portalDom.appendChild(this.el);
   }
 
