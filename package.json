@@ -1,7 +1,7 @@
 {
   "name": "portals-component",
   "description": "this is library for portals components for React.js",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": "takahiro-saeki",
   "files": [
     "lib",
